@@ -21,7 +21,7 @@
         console.log("Updating logging")
     };
 
-    Dropwizard.registerComponent({
+    Dropwizard.mainDashboard.addPageComponent({
         bindings : bindings,
         pageComponent : component,
 
@@ -54,8 +54,8 @@
          * activate Knockout.js data binding.
          */
         beforeSocketConnect : function() {
-            Dropwizard.installRemoteTemplate("logging-template", "/static/templates/logging.html");
-            Dropwizard.appendTemplateTo("logging-template", document.getElementById(component.dom_id));
+            Dropwizard.mainDashboard.installRemoteTemplate("logging-template", "/static/templates/logging.html");
+            Dropwizard.mainDashboard.appendTemplateTo("logging-template", document.getElementById(component.dom_id));
 
             bindings.applicationLogging.subscribe(updateLogging);
         }

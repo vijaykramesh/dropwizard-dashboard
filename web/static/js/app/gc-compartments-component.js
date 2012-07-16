@@ -81,7 +81,7 @@
         }
     });
 
-    Dropwizard.registerComponent({
+    Dropwizard.mainDashboard.addPageComponent({
         bindings : bindings,
         pageComponent : component,
 

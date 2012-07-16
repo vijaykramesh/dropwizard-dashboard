@@ -46,7 +46,7 @@
         used.append(heap.time, heap.used / heap.max);
     };
 
-    Dropwizard.registerComponent({
+    Dropwizard.mainDashboard.addPageComponent({
         bindings : bindings,
         pageComponent : component,
 
@@ -66,8 +66,8 @@
          * activate Knockout.js data binding.
          */
         beforeSocketConnect : function() {
-            Dropwizard.installRemoteTemplate("heap-template", "/static/templates/heap.html");
-            Dropwizard.appendTemplateTo("heap-template", document.getElementById(component.dom_id));
+            Dropwizard.mainDashboard.installRemoteTemplate("heap-template", "/static/templates/heap.html");
+            Dropwizard.mainDashboard.appendTemplateTo("heap-template", document.getElementById(component.dom_id));
 
             var smoothie = new SmoothieChart(chartOptions);
             smoothie.streamTo(document.getElementById("jvm_heap_smoothie_chart"), 1300);
