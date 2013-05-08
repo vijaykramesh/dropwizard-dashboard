@@ -1,0 +1,49 @@
+<div class="span4">
+    <div id="upsell_counter_resource">
+    <h3> UpsellCounterResource#incrementCounter</h3>
+     <table class="table">
+        <tbody>
+        <tr>
+            <th style="width: 20%">Min: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellCounterDurationMin"></span></td>
+
+            <th style="width: 20%">Mean: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellCounterDurationMean"></span></td>
+        </tr>
+        <tr>
+            <th>Max: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellCounterDurationMax"></span></td>
+
+            <th>Median: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellCounterDurationMedian"></span></td>
+        </tr>
+
+        </tbody>
+    </table>
+    </div>
+</div>
+<div class="span6">
+   <div id="upsell_list_resource">
+         <h3>UpsellListResource#getList</h3>
+     <table class="table">
+            <tbody>
+        <tr>
+            <th style="width: 20%">Min: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellListDurationMin"></span></td>
+
+            <th style="width: 20%">Mean: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellListDurationMean"></span></td>
+        </tr>
+        <tr>
+            <th>Max: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellListDurationMax"></span></td>
+
+            <th>Median: </th>
+            <td><span data-bind="text: resourceResponseTimes().upsellListDurationMedian"></span></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+   </div>
+</div>
